@@ -1,11 +1,16 @@
-// ai-happy-01 entry (Node 22, standard library only): the image is the
-// entry.png beside this file, and the program copies it to /output/entry.png.
-// Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
+// ai-happy-01 entry program (Node 22, standard library only).
+//
+// The entry is the image file entry.png sitting next to this program.
+// This program copies it to the output directory as entry.png, creating
+// the directory first if it does not exist yet. The grader supplies the
+// output directory through MAKEFUN_OUTPUT_DIR; when that variable is not
+// set, the program writes to /output. Run it locally like this:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 //
-// The image is a warm digital painting of a small friendly robot and a
-// laughing little girl blowing one giant soap bubble together in a sunny
-// garden. No text in the image; the scene carries the happiness.
+// What the image shows: a small friendly robot and a laughing little girl
+// blowing one giant rainbow soap bubble together in a sunny garden.
+// There is no text anywhere in the image — the joy comes from the scene
+// itself: one shared bubble, the laughter, the warm sunlight.
 
 import { copyFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
